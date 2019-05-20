@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 
 
-<AnchorPane prefHeight="300.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Main">
+<AnchorPane prefHeight="300.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
       <Label layoutX="77.0" layoutY="55.0" prefHeight="16.0" prefWidth="145.0" text="Benvingut a Ajedrez PROP" />
+      <Label layoutX="114.0" layoutY="80.0" text="Què vols fer ?" textFill="#2c2a2a" />
+      <Button layoutX="124.0" layoutY="125.0" mnemonicParsing="false" onAction="#Jugar" text="Jugar" textFill="#2f06fc" />
+      <Button alignment="CENTER" layoutX="89.0" layoutY="161.0" mnemonicParsing="false" onAction="#GestionarProblema" text="Gestionar Problema" textFill="#a46206" />
+      <Button layoutX="108.0" layoutY="195.0" mnemonicParsing="false" onAction="#EditarPerfil" text="Editar Perfil" textFill="#3c0f90" />
+      <Button layoutX="91.0" layoutY="233.0" mnemonicParsing="false" onAction="#ConsultarRankings" text="Consultar Rankings" textFill="#17c416" />
    </children>
 </AnchorPane>
