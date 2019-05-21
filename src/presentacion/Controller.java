@@ -16,6 +16,7 @@ import javafx.stage.Stage;
 import static javafx.collections.FXCollections.observableArrayList;
 
 public class Controller {
+    //DEFINICION TODOS LOS CONTROLS NECESARIOS
     @FXML
     private Label lblStatus;
 
@@ -65,7 +66,7 @@ public class Controller {
     @FXML
     private TextField txtPasswordR2;
 
-    //DEFINICION DE TODOS LOS STAGES
+    //DEFINICION DE TODOS LOS STAGES (WINDOWS)
     private Stage LoginStage = new Stage();
     private Stage SignupStage = new Stage();
     private Stage Signup2Stage = new Stage();
