@@ -4,8 +4,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane prefHeight="300.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<AnchorPane prefHeight="300.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentacion.Controller">
    <children>
       <Label layoutX="77.0" layoutY="55.0" prefHeight="16.0" prefWidth="145.0" text="Benvingut a Ajedrez PROP" />
       <Label layoutX="114.0" layoutY="80.0" text="Què vols fer ?" textFill="#2c2a2a" />
