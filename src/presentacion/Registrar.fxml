@@ -6,13 +6,12 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane prefHeight="300.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentacion.Controller">
    <children>
       <Label layoutX="125.0" layoutY="47.0" text="REGISTRE" />
       <TextField fx:id="txtNom" layoutX="76.0" layoutY="103.0" promptText="Nom" />
       <TextField fx:id="txtUsernameR" layoutX="76.0" layoutY="138.0" promptText="Username" />
-      <Button layoutX="76.0" layoutY="252.0" mnemonicParsing="false" onAction="#Signup2" text="Sign up" />
+      <Button fx:id="BSignup2" layoutX="76.0" layoutY="252.0" mnemonicParsing="false" onAction="#Signup2" text="Sign up" />
       <Label fx:id="lblStatusR" layoutX="162.0" layoutY="256.0" text="Status" />
       <PasswordField fx:id="txtPasswordR1" layoutX="76.0" layoutY="174.0" promptText="Password" />
       <PasswordField fx:id="txtPasswordR2" layoutX="76.0" layoutY="210.0" promptText="Password" />

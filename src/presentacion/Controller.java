@@ -5,12 +5,9 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.Label;
+import javafx.scene.control.*;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.ListView;
-import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import static javafx.collections.FXCollections.observableArrayList;
@@ -19,6 +16,9 @@ public class Controller {
     //DEFINICION TODOS LOS CONTROLS NECESARIOS
     @FXML
     private Label lblStatus;
+
+    @FXML
+    private Button BSignup2;
 
     @FXML
     private Label lblProva;
@@ -76,12 +76,28 @@ public class Controller {
     private Stage ConsultarRankingsStage = new Stage();
     private Stage JugarPartidaStage = new Stage();
 
+    public void inicializarLogin() throws Exception {
+        Parent root = FXMLLoader.load(getClass().getResource("Main.fxml"));
+        LoginStage.setScene(new Scene(root, 400, 400));
+        LoginStage.setTitle("Ajedrez PROP");
+    }
+
+    public void inicializarSignup() throws Exception {
+        Parent root = FXMLLoader.load(getClass().getResource("Registrar.fxml"));
+        SignupStage.setScene(new Scene(root, 400, 400));
+        SignupStage.setTitle("Ajedrez PROP (Sign Up)");
+    }
+
+    public void inicializarSignup2() throws Exception {
+        Parent root = FXMLLoader.load(getClass().getResource("Main.fxml"));
+        Signup2Stage.setScene(new Scene(root, 400, 400));
+        Signup2Stage.setTitle("Ajedrez PROP");
+    }
+
     public void Login() throws Exception{
         if(txtUsername.getText().equals("user") && txtPassword.getText().equals("pass")) { //comprovacio user i pssw
             lblStatus.setText("Login Succes");
-            Parent root = FXMLLoader.load(getClass().getResource("Main.fxml"));
-            LoginStage.setScene(new Scene(root, 400, 400));
-            LoginStage.setTitle("Ajedrez PROP");
+            inicializarLogin();
             LoginStage.show();
         }
         else {
@@ -90,9 +106,7 @@ public class Controller {
     }
 
     public void Signup() throws Exception{ //metode associat al "click" del boto Sign Up de la pantalla inicial
-            Parent root = FXMLLoader.load(getClass().getResource("Registrar.fxml"));
-            SignupStage.setScene(new Scene(root, 400, 400));
-            SignupStage.setTitle("Ajedrez PROP (Sign Up)");
+            inicializarSignup();
             SignupStage.show();
         }
 
@@ -103,11 +117,11 @@ public class Controller {
             }
             else {
                 lblStatusR.setText("Sign up Succes");
-
-                Parent root = FXMLLoader.load(getClass().getResource("Main.fxml"));
-                Signup2Stage.setScene(new Scene(root, 400, 400));
-                Signup2Stage.setTitle("Ajedrez PROP");
+                Stage stage = (Stage) BSignup2.getScene().getWindow(); //Tanco stage el qual pertany el boto Bsignup2
+                stage.close();
+                inicializarSignup2();
                 Signup2Stage.show();
+
             }
 
         }
